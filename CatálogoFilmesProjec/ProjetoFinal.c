@@ -1,20 +1,14 @@
 
 /*
-Trabalho desenvolvido e apresentado ao Centro Federal de Educação Tecnológica de Minas Gerais(CEFET-MG)
-Integrantes do trabalho:
+Trabalho desenvolvido e apresentado ao Centro Federal de Educaï¿½ï¿½o Tecnolï¿½gica de Minas Gerais(CEFET-MG)
 
 * Vitor Mendes de Oliveira Abreu
-* William Duarte de Andrade
-* Lucas Lima Lopes
-* Julia Bretas de Souza Ribeiro
-* Ramon Luiz Souza Bhering Cruz
-* Diogo Augusto Alves Fagundes
 
-O intuito deste trabalho é simular um gerenciamento de um catálago de filmes. 
-Neste trabalho, onde o usúario interage diretamente
-com o programa e insere, edita, remove e imprime os filmes no catálogo, o programa 
-processa os dados e realiza a operação desejada pelo usuário.
-Foi utilizado vetores, apontadores e structs dentre outras operações que foram apresentadas durante as aulas de PC1.
+O intuito deste trabalho Ã© simular um gerenciamento de um catï¿½lago de filmes. 
+Neste trabalho, onde o usï¿½ario interage diretamente
+com o programa e insere, edita, remove e imprime os filmes no catï¿½logo, o programa 
+processa os dados e realiza a operaï¿½ï¿½o desejada pelo usuï¿½rio.
+Foi utilizado vetores, apontadores e structs dentre outras operaï¿½ï¿½es que foram apresentadas durante as aulas de PC1.
 
 */
 
@@ -24,7 +18,7 @@ Foi utilizado vetores, apontadores e structs dentre outras operações que foram a
 #include <stdlib.h>
 #include <math.h>
 
-typedef struct {			//Criando a estrutura principal do programa que será a base de dados a ser gerenciada, aqui ficará todo o catálogo so usuário
+typedef struct {			//Criando a estrutura principal do programa que serï¿½ a base de dados a ser gerenciada, aqui ficarï¿½ todo o catï¿½logo so usuï¿½rio
 
     int identificador;
 
@@ -40,11 +34,11 @@ typedef struct {			//Criando a estrutura principal do programa que será a base d
 }Filme;
 
 
-int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os métodos necessários para o desenvolvimento e gerenciamento do catálogo de filmes
+int main(){			//Funcao main ï¿½ a parte rincipal do programa, ela chama todos os mï¿½todos necessï¿½rios para o desenvolvimento e gerenciamento do catï¿½logo de filmes
 
     Filme vetorFilmes[150];
 
-    setlocale(LC_ALL ,"Portuguese");        //Definindo configuirações
+    setlocale(LC_ALL ,"Portuguese");        //Definindo configuiraï¿½ï¿½es
     setlocale(LC_CTYPE,"pt_BR.UTF-8");
 
     int contaFilmes = 0, verificador = 1, contador1 = 1, opcoes;        //Criando variaveis
@@ -54,12 +48,12 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
     while(contador1 == 1){
 
         printf("Bem vindo ao menu principal!\n");
-        printf("Selecione uma das opções do desejadas do menu para realizar uma ação\n");      //Mostrando menu proncipal
+        printf("Selecione uma das opï¿½ï¿½es do desejadas do menu para realizar uma aï¿½ï¿½o\n");      //Mostrando menu proncipal
         printf("\nDigite [1] para adicionar um filme ");
         printf("\nDigite [2] para editar um filme ");
         printf("\nDigite [3] para remover um filme ");
         printf("\nDigite [4] para imprimir um filme \n\n");
-        printf("Insira sua opção: ");
+        printf("Insira sua opï¿½ï¿½o: ");
 
         scanf("%d",&selecaoMenu);
 
@@ -69,14 +63,14 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
             while(selecaoMenu <1 || selecaoMenu > 4){
 
-                printf("\nDesculpe, opção não encontrada! Favor inserir novamente um valor válido: \n");        //Validando entradas
+                printf("\nDesculpe, opï¿½ï¿½o nï¿½o encontrada! Favor inserir novamente um valor vï¿½lido: \n");        //Validando entradas
                 scanf("%d", &selecaoMenu);
 
             }
 
         }
 
-         switch (selecaoMenu){                  //Selecionando opções, aqui o usuário irá gerenciar o catálogo e escolher a ação
+         switch (selecaoMenu){                  //Selecionando opï¿½ï¿½es, aqui o usuï¿½rio irï¿½ gerenciar o catï¿½logo e escolher a aï¿½ï¿½o
 
             case  1:
 
@@ -84,7 +78,7 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
                 adicionaFilme(vetorFilmes,&contaFilmes);        //Chamando funcao de adicionar filme
 
-                printf("\nDeseja adicionar mais um filme? Digite [1] para 'sim' / Digite [0] para 'não': ");
+                printf("\nDeseja adicionar mais um filme? Digite [1] para 'sim' / Digite [0] para 'nï¿½o': ");
                 scanf("%d", &verificador);
 
                 if(verificador == 0){
@@ -102,22 +96,22 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
                 while(verificador == 1){
 
-                    printf("\nDeseja pesquisar um filme por índice ou por nome?\n\n");
+                    printf("\nDeseja pesquisar um filme por ï¿½ndice ou por nome?\n\n");
 
-                    printf("\n[0] para pesquisar por índice");
+                    printf("\n[0] para pesquisar por ï¿½ndice");
                     printf("\n[1] para pesquisar por nome\n\n");
                     scanf("%d", &opcoes);
 
                     while(opcoes !=0 && opcoes !=1){
 
-                        printf("Opção não encontrada, favor inserir um número válido novamente!\n\n");
+                        printf("Opï¿½ï¿½o nï¿½o encontrada, favor inserir um nï¿½mero vï¿½lido novamente!\n\n");
                         scanf("%d", &opcoes);
 
                     }
 
                     editaFilme (vetorFilmes,&contaFilmes, opcoes);          //Chamando funcao de editar filme
 
-                    printf("\n\nDeseja editar mais algum filme? [1] sim / [0] não: ");
+                    printf("\n\nDeseja editar mais algum filme? [1] sim / [0] nï¿½o: ");
                     scanf("%d", &verificador);
 
                 }
@@ -132,14 +126,14 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
                 removeFilme (vetorFilmes,&contaFilmes);                 //Chamando funcao de remover filme
 
-                printf("\nDeseja remover mais um filme? [1] sim / [0] não: ");
+                printf("\nDeseja remover mais um filme? [1] sim / [0] nï¿½o: ");
                 scanf("%d", &verificador);
 
                 i = 0;
 
                 if(verificador == 0){
 
-                    printf("\nAlterações efetuadas com sucesso!\n");
+                    printf("\nAlteraï¿½ï¿½es efetuadas com sucesso!\n");
                     break;
 
                 }
@@ -158,15 +152,15 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
                 while(verificador == 1){
 
-                    printf("\nDeseja imprimir apenas um filme ou todo catálogo?\n\n");
+                    printf("\nDeseja imprimir apenas um filme ou todo catï¿½logo?\n\n");
 
-                    printf("\n[0] para catálogo");
-                    printf("\n[1] para um filme em específico\n\n");
+                    printf("\n[0] para catï¿½logo");
+                    printf("\n[1] para um filme em especï¿½fico\n\n");
                     scanf("%d", &opcoes);
 
                     while(opcoes !=0 && opcoes !=1){
 
-                        printf("Opção não encontrada, favor inserir um número válido novamente!\n\n");
+                        printf("Opï¿½ï¿½o nï¿½o encontrada, favor inserir um nï¿½mero vï¿½lido novamente!\n\n");
                         scanf("%d", &opcoes);
 
                     }
@@ -174,7 +168,7 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
                     imprimeFilmes (vetorFilmes,&contaFilmes, opcoes);           //Chamando funcao que imprime os filmes cadastrados
 
-                    printf("\n\nDeseja imprimir o catálogo novamente [1] sim / [0] não: ");
+                    printf("\n\nDeseja imprimir o catï¿½logo novamente [1] sim / [0] nï¿½o: ");
                     scanf("%d", &verificador);
 
                 }
@@ -183,7 +177,7 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
     }
 
-    printf("\nDeseja continuar o uso do menu: [1] sim / [0] não: ");		//apos a operação já realizada
+    printf("\nDeseja continuar o uso do menu: [1] sim / [0] nï¿½o: ");		//apos a operaï¿½ï¿½o jï¿½ realizada
     scanf("%d", &contador1);
 
     printf("\n");
@@ -192,8 +186,8 @@ int main(){			//Funcao main é a parte rincipal do programa, ela chama todos os m
 
         while(contador1 !=0 && contador1 !=1 ){
 
-            printf("Desculpe, operação não encontrada,favor inserir o valor novamente\n");		//validando dados
-            printf("Deseja continuar o uso do menu: [1] sim / [0] não: ");
+            printf("Desculpe, operaï¿½ï¿½o nï¿½o encontrada,favor inserir o valor novamente\n");		//validando dados
+            printf("Deseja continuar o uso do menu: [1] sim / [0] nï¿½o: ");
             scanf("%d", &contador1);
 
         }
@@ -207,20 +201,20 @@ return 0;
 }
 
 
-void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Implementação da função que edita o filme desejado
+void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Implementaï¿½ï¿½o da funï¿½ï¿½o que edita o filme desejado
 
     char nomeFilme[50];													//Declarando variaveis
     int VerificaCatalogo = 0;
     int i = 0, i2 = 0,j, j2 = 0, indice;
 
-    printf("Escolha o filme que será editado:\n\n");
+    printf("Escolha o filme que serï¿½ editado:\n\n");
 
-     for(j = 0;j < *contaFilmes; j++){									//mostrar os filmes já adicionados
+     for(j = 0;j < *contaFilmes; j++){									//mostrar os filmes jï¿½ adicionados
 
         printf("\n\nFilme [%d] ", j+1);
         printf("\nNome: %s", vetorFilmes[j].nome);
-        printf("\nGênero: %s", vetorFilmes[j].genero);
-        printf("\nAno de lançamento: %d", vetorFilmes[j].anoLancamento);
+        printf("\nGï¿½nero: %s", vetorFilmes[j].genero);
+        printf("\nAno de lanï¿½amento: %d", vetorFilmes[j].anoLancamento);
         printf("\nNome do diretor: %s ", vetorFilmes[j].nomeDiretor);
 
         printf("\n\n");
@@ -230,16 +224,16 @@ void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Imple
 
     if(opcoes == 0 && *contaFilmes > 0){
 
-        fflush(stdin);					//Função que limpa os buffers de saída
+        fflush(stdin);					//Funï¿½ï¿½o que limpa os buffers de saï¿½da
 
         while(j2< 1){
 
-            printf("Digite o índice do filme que deseja alterar: ");
+            printf("Digite o ï¿½ndice do filme que deseja alterar: ");
             scanf("%d", &indice);
 
             if(indice < 1 || indice > *contaFilmes){
 
-                printf("índice invalido, digite novamente!\n ");		//validando entrdada
+                printf("ï¿½ndice invalido, digite novamente!\n ");		//validando entrdada
                 j2 = j2 -1;
             }
 
@@ -248,11 +242,11 @@ void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Imple
 
         j2 = 0;
 
-        indice = indice -1; //Ja que no vetor começa no 0;
+        indice = indice -1; //Ja que no vetor comeï¿½a no 0;
 
         fflush(stdin);
 
-       while(i < 1){    //laço de repetição criado
+       while(i < 1){    //laï¿½o de repetiï¿½ï¿½o criado
 
             fflush(stdin);
 
@@ -264,12 +258,12 @@ void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Imple
             scanf("%[^\n]", vetorFilmes[indice].genero);
 
             fflush(stdin);
-            printf("\nDigite o novo ano de lançamento do filme editado: ");
+            printf("\nDigite o novo ano de lanï¿½amento do filme editado: ");
             scanf("%d", &vetorFilmes[indice].anoLancamento);
 
             if(vetorFilmes[indice].anoLancamento < 1900 || vetorFilmes[indice].anoLancamento > 2021){		//validando entrdada
 
-                printf("\nApenas filmes lançados entre 1900 e 2021 serão aceitos\n");
+                printf("\nApenas filmes lanï¿½ados entre 1900 e 2021 serï¿½o aceitos\n");
                 printf("Por favor, edite o filme novamente!");
                 continue;
 
@@ -317,12 +311,12 @@ void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Imple
 
                 fflush(stdin);
 
-                printf("\nDigite o novo ano de lançamento do filme editado: ");
+                printf("\nDigite o novo ano de lanï¿½amento do filme editado: ");
                 scanf("%d", &vetorFilmes[j].anoLancamento);
 
                 if(vetorFilmes[j].anoLancamento < 1900 || vetorFilmes[j].anoLancamento > 2021){
 
-                    printf("\nSomente são aceitos filmes no catálogo, lançados entre 1900 e 2021\n");		//validando entrada
+                    printf("\nSomente sï¿½o aceitos filmes no catï¿½logo, lanï¿½ados entre 1900 e 2021\n");		//validando entrada
                     printf("Por favor, edite o filme novamente!");
 
                     while(i2 < 1){
@@ -337,12 +331,12 @@ void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Imple
                         scanf("%[^\n]", vetorFilmes[j].genero);
 
                         fflush(stdin);
-                        printf("\nDigite o novo ano de lançamento do filme editado: ");
+                        printf("\nDigite o novo ano de lanï¿½amento do filme editado: ");
                         scanf("%d", &vetorFilmes[j].anoLancamento);
 
                         if(vetorFilmes[j].anoLancamento < 1900 || vetorFilmes[j].anoLancamento > 2021){
 
-                            printf("\nSomente são aceitos filmes no catálogo, lançados entre 1900 e 2021\n");		//validando entrada
+                            printf("\nSomente sï¿½o aceitos filmes no catï¿½logo, lanï¿½ados entre 1900 e 2021\n");		//validando entrada
                             printf("Por favor, edite o filme novamente!");
                             printf("%d", i2);
 
@@ -385,7 +379,7 @@ void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Imple
 
         if (VerificaCatalogo == 0){
 
-            printf("Não existem filmes na base de dados com o nome inserido para serem editados!");		//validando dados
+            printf("Nï¿½o existem filmes na base de dados com o nome inserido para serem editados!");		//validando dados
 
         }
 
@@ -394,26 +388,26 @@ void editaFilme(Filme vetorFilmes[],int *contaFilmes, int opcoes){       //Imple
         i2 = 0;
 
     }
-void adicionaFilme(Filme vetorFilmes[], int *contaFilmes){       //Implementação da função que adiciona o filme desejado
+void adicionaFilme(Filme vetorFilmes[], int *contaFilmes){       //Implementaï¿½ï¿½o da funï¿½ï¿½o que adiciona o filme desejado
 
-    printf("\nAtente-se ao limite de 150 filmes simultâneos!\n");
-    printf("Atualmente existem %d filmes no catálogo\n",*contaFilmes);
+    printf("\nAtente-se ao limite de 150 filmes simultï¿½neos!\n");
+    printf("Atualmente existem %d filmes no catï¿½logo\n",*contaFilmes);
 
-        fflush(stdin);          //Função que limpa os buffers de saída
+        fflush(stdin);          //Funï¿½ï¿½o que limpa os buffers de saï¿½da
         printf("\nDigite o nome do filme: ");
         scanf("%[^\n]", vetorFilmes[*contaFilmes].nome);
 
         fflush(stdin);
-        printf("Digite o gênero do filme: ");
+        printf("Digite o gï¿½nero do filme: ");
         scanf("%[^\n]", vetorFilmes[*contaFilmes].genero);
 
         fflush(stdin);
-        printf("Digite o ano de lançamento do filme: ");
+        printf("Digite o ano de lanï¿½amento do filme: ");
         scanf("%d", &vetorFilmes[*contaFilmes].anoLancamento);
 
         if(vetorFilmes[*contaFilmes].anoLancamento < 1900 || vetorFilmes[*contaFilmes].anoLancamento > 2021){
 
-            printf("\nAoenas filmes lançados entre 1900 e 2021 são aceitos");			//validando dados
+            printf("\nAoenas filmes lanï¿½ados entre 1900 e 2021 sï¿½o aceitos");			//validando dados
             *contaFilmes = *contaFilmes - 1;
         }
 
@@ -429,7 +423,7 @@ void adicionaFilme(Filme vetorFilmes[], int *contaFilmes){       //Implementação
 
     }
 
-void imprimeFilmes(Filme vetorFilmes[],int *contaFilmes, int opcoes){					//Implementação da função que imprime os filme desejados
+void imprimeFilmes(Filme vetorFilmes[],int *contaFilmes, int opcoes){					//Implementaï¿½ï¿½o da funï¿½ï¿½o que imprime os filme desejados
 
     int VerificaCatalogo = 0;
     char nomeFilme[50];				//iniciando variaveis
@@ -441,8 +435,8 @@ void imprimeFilmes(Filme vetorFilmes[],int *contaFilmes, int opcoes){					//Impl
 
                 printf("\n\nFilme [%d] ", i+1);
                 printf("\nNome: %s", vetorFilmes[i].nome);
-                printf("\nGênero: %s", vetorFilmes[i].genero);
-                printf("\nAno de lançamento: %d", vetorFilmes[i].anoLancamento);
+                printf("\nGï¿½nero: %s", vetorFilmes[i].genero);
+                printf("\nAno de lanï¿½amento: %d", vetorFilmes[i].anoLancamento);
                 printf("\nNome do diretor: %s ", vetorFilmes[i].nomeDiretor);
 
                 printf("\n\n");
@@ -464,8 +458,8 @@ void imprimeFilmes(Filme vetorFilmes[],int *contaFilmes, int opcoes){					//Impl
 
                 printf("\n\nFilme [%d] ", i+1);
                 printf("\nNome: %s", vetorFilmes[i].nome);
-                printf("\nGênero: %s", vetorFilmes[i].genero);
-                printf("\nAno de lançamento: %d", vetorFilmes[i].anoLancamento);
+                printf("\nGï¿½nero: %s", vetorFilmes[i].genero);
+                printf("\nAno de lanï¿½amento: %d", vetorFilmes[i].anoLancamento);
                 printf("\nNome do diretor: %s ", vetorFilmes[i].nomeDiretor);
 
                 VerificaCatalogo = 1;
@@ -475,7 +469,7 @@ void imprimeFilmes(Filme vetorFilmes[],int *contaFilmes, int opcoes){					//Impl
 
         if (VerificaCatalogo == 0){			//validando dados
 
-            printf("Não existem filmes na base de dados com o nome digitado para serem catalogados!");
+            printf("Nï¿½o existem filmes na base de dados com o nome digitado para serem catalogados!");
 
         }
 
@@ -485,13 +479,13 @@ void imprimeFilmes(Filme vetorFilmes[],int *contaFilmes, int opcoes){					//Impl
     }
     if(*contaFilmes == 0){
 
-        printf("Não existe este filme no catálogo! ");
+        printf("Nï¿½o existe este filme no catï¿½logo! ");
 
     }
 
 }
 
-void removeFilme(Filme vetorFilmes[],int *contaFilmes){						//Implementação da função que remove o filme desejado
+void removeFilme(Filme vetorFilmes[],int *contaFilmes){						//Implementaï¿½ï¿½o da funï¿½ï¿½o que remove o filme desejado
 
     int numFilme;
 
@@ -501,22 +495,22 @@ void removeFilme(Filme vetorFilmes[],int *contaFilmes){						//Implementação da 
 
                 printf("\n\nFilme [%d] ", i+1);
                 printf("\nNome: %s", vetorFilmes[i].nome);
-                printf("\nGênero: %s", vetorFilmes[i].genero);
-                printf("\nAno de lançamento: %d", vetorFilmes[i].anoLancamento);
+                printf("\nGï¿½nero: %s", vetorFilmes[i].genero);
+                printf("\nAno de lanï¿½amento: %d", vetorFilmes[i].anoLancamento);
                 printf("\nNome do diretor: %s ", vetorFilmes[i].nomeDiretor);
 
                 printf("\n\n");
 
             }
 
-        printf("\nDigite o número do filme que queira remover:  ");
+        printf("\nDigite o nï¿½mero do filme que queira remover:  ");
         scanf("%d", &numFilme);
 
         if (numFilme > *contaFilmes || numFilme <= 0){
 
             while(numFilme > *contaFilmes || numFilme <= 0){
 
-           printf("\nNão foi encontrado o filme no catálogo, digite outro número novamente:");
+           printf("\nNï¿½o foi encontrado o filme no catï¿½logo, digite outro nï¿½mero novamente:");
            scanf("%d", &numFilme);
 
             }
@@ -541,7 +535,7 @@ void removeFilme(Filme vetorFilmes[],int *contaFilmes){						//Implementação da 
 
     else{
 
-         printf("\nNâo há filme para sere removido");
+         printf("\nNï¿½o hï¿½ filme para sere removido");
     }
 
 
